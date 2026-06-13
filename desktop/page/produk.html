@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk Paket Belajar - Ruangguru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styling/style.css">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar__inner">
+                <div class="navbar__left">
+                  <a href="../index.html" class="logo">
+                  <img src="../assets/logo-white.svg" alt="Ruang Belajar" style="width: 100px;"></a>
+                </div>
+                <div class="navbar__center">
+                    <div class="navbar__menu">
+                        <a href="../page/belajar.html" class="navbar__link">Belajar</a>
+                        <a href="../page/produk.html" class="navbar__link navbar__link--active">Produk</a>
+                        <a href="../page/guru.html" class="navbar__link">Guru</a>
+                        <a href="../page/tentang.html" class="navbar__link">Tentang</a>
+                    </div>
+                </div>
+                <div class="navbar__right">
+                    <button class="btn-auth">Daftar/Masuk</button>
+                    <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-wrapper">
+        
+        <div class="product-header">
+            <h2 class="product-main-title">Pilih Paket Belajar Sesuai <span class="highlight-teal">Kebutuhanmu</span></h2>
+            <p class="product-subtitle">Investasi terbaik untuk masa depan pendidikan dan prestasi akademik yang gemilang</p>
+        </div>
+
+        <div class="product-tabs-container">
+            <button class="tab-btn tab-btn--active" onclick="filterJenjang('sd')">SD</button>
+            <button class="tab-btn" onclick="filterJenjang('smp')">SMP</button>
+            <button class="tab-btn" onclick="filterJenjang('sma')">SMA</button>
+            <button class="tab-btn" onclick="filterJenjang('utbk')">UTBK</button>
+        </div>
+
+        <div class="product-cards-grid">
+            
+            <div class="prod-card" data-jenjang="sd smp sma">
+                <div class="prod-card__badge-container">
+                    <span class="prod-badge bg-orange">Terpopuler</span>
+                </div>
+                <div class="prod-card__header">
+                    <div class="prod-card__icon text-orange"><i class="fa-solid fa-square-play"></i></div>
+                    <h3 class="prod-card__title">Paket Video Pembelajaran</h3>
+                </div>
+                <p class="prod-card__desc">Akses penuh ke ribuan video animasi premium, rangkuman infografis, dan kuis pemahaman konsep mendalam.</p>
+                <div class="prod-card__price-section">
+                    <span class="price-old">Rp 650.000</span>
+                    <div class="price-current-row">
+                        <span class="price-now">Rp 249.000</span>
+                        <span class="price-period">/ tahun</span>
+                    </div>
+                </div>
+                <ul class="prod-card__features">
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Video Animasi Ruangbelajar</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Rangkuman Materi Kilat</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Kuis & Analisis Progres Belajar</li>
+                </ul>
+                <button class="prod-card__btn btn-orange">Beli Paket Video <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="prod-card" data-jenjang="sd smp sma utbk">
+                <div class="prod-card__badge-container">
+                    <span class="prod-badge bg-blue">Rekomendasi</span>
+                </div>
+                <div class="prod-card__header">
+                    <div class="prod-card__icon text-blue"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                    <h3 class="prod-card__title">Paket Bank Soal & Tryout</h3>
+                </div>
+                <p class="prod-card__desc">Asah kemampuan ujianmu dengan puluhan ribu variasi soal terupdate, pembahasan instan, dan tryout berkala.</p>
+                <div class="prod-card__price-section">
+                    <span class="price-old">Rp 450.000</span>
+                    <div class="price-current-row">
+                        <span class="price-now">Rp 189.000</span>
+                        <span class="price-period">/ tahun</span>
+                    </div>
+                </div>
+                <ul class="prod-card__features">
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Bank Soal Berbagai Tingkat Kesulitan</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Pembahasan Lengkap Teks & Video</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Simulasi Ujian Real-time</li>
+                </ul>
+                <button class="prod-card__btn btn-blue">Beli Paket Soal <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="prod-card" data-jenjang="smp sma utbk">
+                <div class="prod-card__badge-container">
+                    <span class="prod-badge bg-teal">Live Interaktif</span>
+                </div>
+                <div class="prod-card__header">
+                    <div class="prod-card__icon text-teal"><i class="fa-solid fa-tower-broadcast"></i></div>
+                    <h3 class="prod-card__title">Paket Live Class Interaktif</h3>
+                </div>
+                <p class="prod-card__desc">Interaksi langsung dua arah bersama Master Tutor terbaik, bebas tanya soal sulit, dan diskusi kelompok kelas virtual.</p>
+                <div class="prod-card__price-section">
+                    <span class="price-old">Rp 1.800.000</span>
+                    <div class="price-current-row">
+                        <span class="price-now">Rp 799.000</span>
+                        <span class="price-period">/ tahun</span>
+                    </div>
+                </div>
+                <ul class="prod-card__features">
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Sesi Live Streaming Terjadwal</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Konsultasi PR / Tugas via Chat</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Rekaman Ulang Kelas Live</li>
+                </ul>
+                <button class="prod-card__btn btn-teal">Beli Paket Live <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="prod-card" data-jenjang="sd smp sma">
+                <div class="prod-card__badge-container">
+                    <span class="prod-badge bg-purple">Eksklusif</span>
+                </div>
+                <div class="prod-card__header">
+                    <div class="prod-card__icon text-purple"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3 class="prod-card__title">Paket Rangkuman Materi</h3>
+                </div>
+                <p class="prod-card__desc">Kumpulan rangkuman cetak digital super ringkas, peta konsep esensial, rumus cepat pelopor nilai ujian sempurna.</p>
+                <div class="prod-card__price-section">
+                    <span class="price-old">Rp 300.000</span>
+                    <div class="price-current-row">
+                        <span class="price-now">Rp 99.000</span>
+                        <span class="price-period">/ tahun</span>
+                    </div>
+                </div>
+                <ul class="prod-card__features">
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Infografis Peta Konsep Berwarna</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Kumpulan Rumus Cepat & Smart Solution</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Download File Siap Cetak</li>
+                </ul>
+                <button class="prod-card__btn btn-purple">Beli Paket Rangkuman <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="prod-card" data-jenjang="utbk">
+                <div class="prod-card__badge-container">
+                    <span class="prod-badge bg-red">Spesial UTBK</span>
+                </div>
+                <div class="prod-card__header">
+                    <div class="prod-card__icon text-red"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="prod-card__title">Paket Sukses UTBK SNBT</h3>
+                </div>
+                <p class="prod-card__desc">Akselerasi persiapan masuk PTN impian dengan simulasi IRT Akurat, materi penalaran matematika lengkap, dan rasio kelulusan.</p>
+                <div class="prod-card__price-section">
+                    <span class="price-old">Rp 2.500.000</span>
+                    <div class="price-current-row">
+                        <span class="price-now">Rp 999.000</span>
+                        <span class="price-period">/ UTBK Period</span>
+                    </div>
+                </div>
+                <ul class="prod-card__features">
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Simulasi Sistem IRT Persis SNBT</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Rasio Peluang Kelulusan Jurusan</li>
+                    <li><i class="fa-solid fa-circle-check text-teal"></i> Strategi Pilihan Kampus Bersama Konselor</li>
+                </ul>
+                <button class="prod-card__btn btn-red">Beli Paket UTBK <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="download-strip">
+        <div class="container download-strip__inner">
+            <h3>Coba Gratis Aplikasi Ruangguru</h3>
+            <div class="store-badges">
+                <img src="/assets/images/google play.png" alt="Google Play" class="clickable-badge">
+                <img src="/assets/images/app store.png" alt="App Store" class="clickable-badge">
+                <img src="/assets/images/huawei store.png" alt="AppGallery" class="clickable-badge hg-badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <a href="../index.html" class="logo">
+                 <img src="../assets/logo.svg" alt="Ruang Belajar"></a>
+                <p class="footer-tagline">Belajar lebih seru di Ruangguru</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Belajar</h4>
+                <a href="../page/video.html">Video</a>
+                <a href="../page/latihan.html">Latihan Soal</a>
+                <a href="../page/liveclass.html">Live class</a>
+                <a href="../page/rangkuman.html">Rangkuman</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Produk</h4>
+                <a href="../page/produk.html">Paket Langganan</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Guru</h4>
+                <a href="../page/daftar.html">Daftar tutor</a>
+                <a href="../page/liveClassGuru.html">Live class</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Tentang</h4>
+                <a href="#">Testimoni</a>
+                <a href="#">Promo</a>
+                <a href="#">Kontak</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom__inner">
+                <p>&copy; Copyright 2026 Ruangguru</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterJenjang(jenjang) {
+            // 1. Ganti status tombol active tab
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('tab-btn--active'));
+            
+            // Cari tombol yang sesuai teksnya lalu nyalakan kelas aktif
+            buttons.forEach(btn => {
+                if (btn.innerText.toLowerCase() === jenjang) {
+                    btn.classList.add('tab-btn--active');
+                }
+            });
+
+            // 2. Saring kartu paket berdasarkan attribute data-jenjang
+            const cards = document.querySelectorAll('.prod-card');
+            cards.forEach(card => {
+                const targetAttrs = card.getAttribute('data-jenjang');
+                if (targetAttrs.includes(jenjang)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Setelan awal: Begitu halaman dibuka, langsung filter jenjang 'sd' aktif otomatis
+        window.addEventListener('DOMContentLoaded', () => {
+            filterJenjang('sd');
+        });
+    </script>
+</body>
+</html>

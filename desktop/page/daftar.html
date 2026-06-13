@@ -1,0 +1,553 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Akun Ruangguru | Platform Belajar Online Terbaik Indonesia</title>
+  <meta name="description" content="Daftar akun Ruangguru sekarang dan mulai belajar dengan platform pendidikan online terbaik di Indonesia. Akses ribuan materi pembelajaran, video interaktif, dan bimbingan belajar berkualitas.">
+  <meta name="keywords" content="ruangguru, daftar ruangguru, registrasi ruangguru, belajar online, platform pendidikan, bimbingan belajar">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daftar Akun Ruangguru | Platform Belajar Online Terbaik Indonesia">
+  <meta property="og:description" content="Daftar akun Ruangguru sekarang dan mulai belajar dengan platform pendidikan online terbaik di Indonesia.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #00a68f;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    /* Layout components */
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: 16px;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1250px;
+      margin-top: 32px;
+      gap: 24px;
+    }
+    
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .hero-title {
+      font-size: 32px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+      color: #111827;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 16px;
+    }
+    
+    .hero-title-highlight {
+      color: #f8fafb;
+    }
+    
+    .hero-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-top: 0;
+    }
+    
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      background-color: #f8fafb;
+      border-radius: 20px;
+      padding: 32px 24px;
+    }
+    
+    .form-title {
+      font-size: 28px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: left;
+      color: #000000;
+      margin-top: 0;
+    }
+    
+    .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
+    
+    .form-label {
+      font-size: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: left;
+      color: #000000;
+    }
+    
+    .input-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+    
+    .input-field {
+      width: 100%;
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 400;
+      line-height: 21px;
+      color: #6b7280;
+      background-color: #f8fafb;
+      border: 1px solid rgba(156, 163, 175, 0.5);
+      border-radius: 28px;
+      padding: 14px 34px 14px 60px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    
+    .input-field::placeholder {
+      color: rgba(107, 114, 128, 0.5);
+    }
+    
+    .input-field:focus {
+      border-color: #006e5f;
+      box-shadow: 0 0 0 3px rgba(0, 110, 95, 0.1);
+    }
+    
+    .input-icon-left {
+      position: absolute;
+      left: 24px;
+      width: 20px;
+      height: 22px;
+      pointer-events: none;
+    }
+    
+    .input-icon-right {
+      position: absolute;
+      right: 24px;
+      width: 32px;
+      height: 22px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    
+    .input-icon-right:hover {
+      opacity: 0.7;
+    }
+    
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 16px;
+    }
+    
+    .btn-primary {
+      width: 100%;
+      font-size: 18px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: center;
+      color: #f8fafb;
+      background-color: #006e5f;
+      border: none;
+      border-radius: 28px;
+      padding: 12px 34px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #005a4d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 110, 95, 0.3);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 110, 95, 0.2);
+    }
+    
+    .btn-google {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 26px;
+      color: #f8fafb;
+      background-color: #006e5f;
+      border: none;
+      border-radius: 28px;
+      padding: 12px 34px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-google:hover {
+      background-color: #005a4d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 110, 95, 0.3);
+    }
+    
+    .btn-google:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 110, 95, 0.2);
+    }
+    
+    .google-icon {
+      width: 26px;
+      height: 26px;
+    }
+    
+    .signin-link {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+    }
+    
+    .signin-text {
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+      line-height: 21px;
+      color: #6b7280;
+    }
+    
+    .signin-link-text {
+      font-size: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 21px;
+      color: #374151;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .signin-link-text:hover {
+      color: #006e5f;
+      text-decoration: underline;
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .main-container {
+        padding: 24px;
+      }
+      
+      .content-wrapper {
+        margin-top: 48px;
+        gap: 32px;
+      }
+      
+      .hero-title {
+        font-size: 48px;
+        line-height: 60px;
+      }
+      
+      .hero-image {
+        max-width: 480px;
+      }
+      
+      .form-container {
+        padding: 40px 32px;
+      }
+      
+      .form-title {
+        font-size: 32px;
+        line-height: 42px;
+      }
+      
+      .form-label {
+        font-size: 18px;
+        line-height: 23px;
+      }
+      
+      .input-field {
+        font-size: 16px;
+        padding: 16px 34px 16px 70px;
+      }
+      
+      .input-icon-left {
+        left: 28px;
+      }
+      
+      .btn-primary,
+      .btn-google {
+        font-size: 20px;
+      }
+      
+      .signin-text,
+      .signin-link-text {
+        font-size: 16px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .content-wrapper {
+        margin-top: 64px;
+      }
+      
+      .hero-title {
+        font-size: 56px;
+        line-height: 70px;
+      }
+      
+      .hero-image {
+        max-width: 520px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .main-container {
+        padding: 32px 84px;
+      }
+      
+      .content-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 92px;
+        gap: 20px;
+      }
+      
+      .hero-section {
+        width: 52%;
+        align-items: flex-start;
+      }
+      
+      .hero-content {
+        align-items: flex-start;
+      }
+      
+      .hero-title {
+        font-size: 64px;
+        line-height: 80px;
+        text-align: left;
+      }
+      
+      .hero-image {
+        max-width: 550px;
+        margin-top: -6px;
+        margin-left: 38px;
+        margin-right: 46px;
+      }
+      
+      .form-section {
+        width: 48%;
+      }
+      
+      .form-container {
+        padding: 50px;
+      }
+      
+      .form-title {
+        font-size: 40px;
+        line-height: 51px;
+        margin-top: 28px;
+      }
+      
+      .button-group {
+        margin-top: 0;
+      }
+      
+      .signin-link {
+        margin-top: 28px;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .hero-title {
+        font-size: 72px;
+        line-height: 90px;
+      }
+    }
+    
+    @media (min-width: 1536px) {
+      .hero-title {
+        font-size: 80px;
+        line-height: 100px;
+      }
+    }
+  </style>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fruangguru9627back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.19"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+  </head>
+<body>
+  <main class="main-container">
+    <div class="content-wrapper">
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Selamat Datang <br>di <span class="hero-title-highlight">Ruangguru</span>
+          </h1>
+          <img src="../assets/images/img_welcome_cuate.svg" alt="Welcome illustration showing people celebrating with a welcome banner" class="hero-image">
+        </div>
+      </section>
+      
+      <section class="form-section">
+        <div class="form-container">
+          <h2 class="form-title">Daftar Akun</h2>
+          
+          <form class="form-fields">
+            <div class="form-group">
+              <label for="username" class="form-label">Nama Pengguna</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/img_vector.svg" alt="" class="input-icon-left">
+                <input 
+                  type="text" 
+                  id="username" 
+                  class="input-field" 
+                  placeholder="Masukkan teks"
+                  aria-label="Nama Pengguna"
+                >
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/img_vector_gray_900.svg" alt="" class="input-icon-left">
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="input-field" 
+                  placeholder="Masukkan teks"
+                  aria-label="Email"
+                >
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="password" class="form-label">Kata Sandi</label>
+              <div class="input-wrapper">
+                <img src="../assets/images/img_vector_gray_900_22x20.svg" alt="" class="input-icon-left">
+                <input 
+                  type="password" 
+                  id="password" 
+                  class="input-field" 
+                  placeholder="Masukkan teks"
+                  aria-label="Kata Sandi"
+                >
+                <img 
+                  src="../assets/images/img_iconoireyesolid.svg" 
+                  alt="Toggle password visibility" 
+                  class="input-icon-right"
+                  onclick="togglePassword()"
+                  role="button"
+                  tabindex="0"
+                >
+              </div>
+            </div>
+            
+            <div class="button-group">
+              <button type="submit" class="btn-primary">Daftar</button>
+              <button type="button" class="btn-google">
+                <img src="../assets/images/img_rigooglefill.svg" alt="Google icon" class="google-icon">
+                Sign up dengan Google
+              </button>
+              
+              <div class="signin-link">
+                <span class="signin-text">Sudah memiliki akun?</span>
+                <a href="login.html" class="signin-link-text">Masuk</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    }
+
+    // Handle form submission → navigate to home page
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = '../index.html';
+    });
+  </script>
+</body>
+</html>

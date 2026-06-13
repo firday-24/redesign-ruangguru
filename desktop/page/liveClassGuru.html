@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Class Preview Guru - Ruang Belajar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styling/liveClassGuru.css">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar__inner">
+                <div class="navbar__left">
+                  <a href="../index.html" class="logo">
+                  <img src="../assets/logo-white.svg" alt="Ruang Belajar" style="width: 100px;"></a>
+                </div>
+                <div class="navbar__center">
+                    <div class="navbar__menu">
+                        <a href="../page/belajar.html" class="navbar__link">Belajar</a>
+                        <a href="../page/produk.html" class="navbar__link">Produk</a>
+                        <a href="../page/guru.html" class="navbar__link">Guru</a>
+                        <a href="../page/tentang.html" class="navbar__link">Tentang</a>
+                    </div>
+                </div>
+                <div class="navbar__right">
+                    <button class="btn-auth">Daftar/Masuk</button>
+                    <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <header class="header-bar">
+            <div class="header-left">
+                <button class="btn-icon"><i class="fa-solid fa-arrow-left"></i></button>
+                <h1>UTBK: Penalaran Matematika</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon"><i class="fa-solid fa-bookmark"></i></button>
+                <button class="btn-icon"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
+        </header>
+
+        <section class="video-container">
+            <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=1200" alt="Video Preview" class="video-thumbnail">
+            <div class="video-overlay">
+                <button class="play-btn"><i class="fa-solid fa-play"></i></button>
+                <div class="video-controls">
+                    <div class="time-slider">
+                        <div class="slider-progress"></div>
+                    </div>
+                    <div class="controls-bottom">
+                        <div class="controls-left">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <span>12:45 / 34:20</span>
+                        </div>
+                        <div class="controls-right">
+                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-users icon-stat"></i>
+                <span class="stat-value">150</span>
+                <span class="stat-label">TERDAFTAR</span>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-clock icon-stat"></i>
+                <span class="stat-value">120</span>
+                <span class="stat-label">MENIT</span>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-file-lines icon-stat"></i>
+                <span class="stat-value">3</span>
+                <span class="stat-label">DOKUMEN</span>
+            </div>
+        </section>
+
+        <section class="checklist-section">
+            <div class="checklist-header">
+                <h2>Preparation Checklist</h2>
+                <span class="progress-text">2/3 Selesai</span>
+            </div>
+            
+            <div class="checklist-box">
+                <div class="checklist-item checked">
+                    <div class="item-left">
+                        <span class="check-circle"><i class="fa-solid fa-check"></i></span>
+                        <span class="item-text">Koneksi Internet</span>
+                    </div>
+                    <i class="fa-solid fa-wifi item-icon"></i>
+                </div>
+                
+                <div class="checklist-item checked">
+                    <div class="item-left">
+                        <span class="check-circle"><i class="fa-solid fa-check"></i></span>
+                        <span class="item-text">Mikrofon & Kamera</span>
+                    </div>
+                    <i class="fa-solid fa-video item-icon"></i>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="item-left">
+                        <span class="check-circle"></span>
+                        <span class="item-text">Materi Presentasi</span>
+                    </div>
+                    <i class="fa-solid fa-file-arrow-up item-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <footer class="action-container">
+            <button class="btn-start">Mulai Kelas <i class="fa-solid fa-arrow-right"></i></button>
+        </footer>
+
+    </main>
+
+</body>
+</html>

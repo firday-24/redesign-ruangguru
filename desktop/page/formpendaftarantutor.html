@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Tutor - Ruang Belajar</title>
+  
+  <!-- Memanggil File CSS Terpisah -->
+  <link rel="stylesheet" href="/styling/Style.css">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="../index.html" class="logo">
+      <img src="assets/logo.svg" alt="Ruang Belajar"></a>
+      <nav class="navbar__menu">
+        <a href="/page/belajar.html" class="navbar__link">Belajar</a>
+        <a href="/page/produk.html" class="navbar__link">Produk</a>
+        <a href="/page/guru.html" class="navbar__link">Guru</a>
+        <a href="/page/tentang.html" class="navbar__link">Tentang</a>
+      </nav>
+      <div class="navbar__profile">
+        <div class="profile-avatar">M</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ STEPPER PROGRESS CONTROLLER ============ -->
+  <div class="stepper-container" id="global-stepper">
+    <div class="stepper">
+      <div class="stepper__progress-line" id="step-line"></div>
+      
+      <div class="step-item step-item--active" id="step-dot-1">
+        <div class="step-item__circle">1</div>
+        <div class="step-item__label">Data Diri</div>
+      </div>
+      <div class="step-item" id="step-dot-2">
+        <div class="step-item__circle">2</div>
+        <div class="step-item__label">Keahlian</div>
+      </div>
+      <div class="step-item" id="step-dot-3">
+        <div class="step-item__circle">3</div>
+        <div class="step-item__label">Dokumen</div>
+      </div>
+      <div class="step-item" id="step-dot-4">
+        <div class="step-item__circle">4</div>
+        <div class="step-item__label">Review</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CONTAINER MASTER INTERFACE ============ -->
+  <div class="container">
+
+    <!-- --------------------------------------------------------
+         TAB STEP 1: DATA DIRI
+         -------------------------------------------------------- -->
+    <div class="form-section form-section--active" id="section-1">
+      <h1 class="section-title">Data Diri</h1>
+      <p class="section-subtitle">Isi informasi dasar kamu sebagai calon tutor</p>
+
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label>Nama Depan<span>*</span></label>
+          <input type="text" class="form-control" value="Budi">
+        </div>
+        <div class="form-group">
+          <label>Nama Belakang<span>*</span></label>
+          <input type="text" class="form-control" value="Santoso">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email<span>*</span></label>
+        <input type="email" class="form-control" value="budi@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>No. WhatsApp<span>*</span></label>
+        <input type="text" class="form-control" value="081234567890">
+      </div>
+
+      <div class="form-grid-2">
+        <div class="form-group">
+          <label>Domisili<span>*</span></label>
+          <input type="text" class="form-control" value="Malang, Jawa Timur">
+        </div>
+        <div class="form-group">
+          <label>Pendidikan Terakhir</label>
+          <select class="form-control">
+            <option>S1</option>
+            <option>S2</option>
+            <option>S3</option>
+            <option>D3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Perkenalkan Dirimu Secara Singkat<span>*</span></label>
+        <textarea class="form-control">Saya adalah lulusan matematika yang memiliki minat tinggi dalam dunia edukasi...</textarea>
+      </div>
+
+      <div class="action-row">
+        <button class="btn btn--primary btn--full" onclick="navigateStep(2)">Lanjut</button>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+         TAB STEP 2: KEAHLIAN MENGAJAR
+         -------------------------------------------------------- -->
+    <div class="form-section" id="section-2">
+      <h1 class="section-title">Keahlian Mengajar</h1>
+      <p class="section-subtitle">Pilih mata pelajaran yang kamu kuasai</p>
+
+      <div class="form-group">
+        <label>Pilih Mata Pelajaran<span>*</span> <span style="color:#64748b; font-weight:normal">(bisa lebih dari satu)</span></label>
+        
+        <div class="subjects-grid">
+          <label>
+            <input type="checkbox" class="subject-checkbox" checked>
+            <span class="subject-label-box">Matematika</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Fisika</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox" checked>
+            <span class="subject-label-box">Kimia</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Biologi</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Bahasa Inggris</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Bahasa Indonesia</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Sejarah</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Geografi</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Ekonomi</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">TPS/UTBK</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Informatika</span>
+          </label>
+          <label>
+            <input type="checkbox" class="subject-checkbox">
+            <span class="subject-label-box">Lainnya</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Jenjang yang diajar<span>*</span></label>
+        <input type="text" class="form-control" value="SMA">
+      </div>
+
+      <div class="form-group">
+        <label>Pengalaman Mengajar<span>*</span></label>
+        <input type="text" class="form-control" value="1–3 tahun">
+      </div>
+
+      <div class="form-group">
+        <label>Ketersediaan Waktu<span>*</span></label>
+        <input type="text" class="form-control" value="Weekend">
+      </div>
+
+      <div class="action-row">
+        <button class="btn btn--secondary" onclick="navigateStep(1)">Kembali</button>
+        <button class="btn btn--primary" onclick="navigateStep(3)">Lanjut</button>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+         TAB STEP 3: DOKUMEN YANG DIBUTUHKAN
+         -------------------------------------------------------- -->
+    <div class="form-section" id="section-3">
+      <h1 class="section-title">Dokumen yang Dibutuhkan</h1>
+      <p class="section-subtitle">Dokumen digunakan untuk verifikasi identitas dan kualifikasi kamu</p>
+
+      <div class="form-group">
+        <label>Foto KTP / Identitas<span>*</span></label>
+        <div class="upload-zone">
+          <span class="upload-zone__text">Klik atau seret file ke sini</span>
+          <span class="upload-zone__sub">JPG, PNG - maks. 5 MB</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Ijazah/Transkrip Nilai<span>*</span></label>
+        <div class="upload-zone">
+          <span class="upload-zone__text">Klik atau seret file ke sini</span>
+          <span class="upload-zone__sub">JPG, PNG - maks. 10 MB</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Foto Profil<span>*</span></label>
+        <div class="upload-zone">
+          <span class="upload-zone__text">Foto diri formal (tampak jelas)</span>
+          <span class="upload-zone__sub">JPG, PNG - maks. 3 MB</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Sertifikat/Portofolio Tambahan <span style="color:#64748b; font-weight:normal">(opsional)</span></label>
+        <div class="upload-zone">
+          <span class="upload-zone__text">Sertifikat pendidikan, penghargaan, dll.</span>
+          <span class="upload-zone__sub">JPG, PNG - maks. 10 MB</span>
+        </div>
+      </div>
+
+      <div class="action-row">
+        <button class="btn btn--secondary" onclick="navigateStep(2)">Kembali</button>
+        <button class="btn btn--primary" onclick="navigateStep(4)">Lanjut</button>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+         TAB STEP 4: REVIEW PENDAFTARAN
+         -------------------------------------------------------- -->
+    <div class="form-section" id="section-4">
+      <h1 class="section-title">Review Pendaftaran</h1>
+      <p class="section-subtitle">Pastikan semua data benar sebelum dikirim</p>
+
+      <!-- Review Sub-Box Data Diri -->
+      <div class="review-box">
+        <h3 class="review-box__title">Data Diri</h3>
+        <table class="review-table">
+          <tr>
+            <td>Nama</td>
+            <td>Budi Santoso</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>budi@email.com</td>
+          </tr>
+          <tr>
+            <td>WhatsApp</td>
+            <td>081234567890</td>
+          </tr>
+          <tr>
+            <td>Domisili</td>
+            <td>Malang, Jawa Timur</td>
+          </tr>
+          <tr>
+            <td>Pendidikan</td>
+            <td>S1</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Review Sub-Box Keahlian -->
+      <div class="review-box">
+        <h3 class="review-box__title">Keahlian</h3>
+        <table class="review-table">
+          <tr>
+            <td>Mata Pelajaran</td>
+            <td>
+              <span class="review-badge">Matematika</span>
+              <span class="review-badge">Kimia</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Jenjang</td>
+            <td>SMA</td>
+          </tr>
+          <tr>
+            <td>Pengalaman</td>
+            <td>1–3 tahun</td>
+          </tr>
+          <tr>
+            <td>Ketersediaan</td>
+            <td>Weekend</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Review Sub-Box Dokumen -->
+      <div class="review-box">
+        <h3 class="review-box__title">Dokumen</h3>
+        <table class="review-table">
+          <tr>
+            <td>KTP</td>
+            <td class="review-success-text">✓ Terupload</td>
+          </tr>
+          <tr>
+            <td>Ijazah</td>
+            <td class="review-success-text">✓ Terupload</td>
+          </tr>
+          <tr>
+            <td>Foto Profil</td>
+            <td class="review-success-text">✓ Terupload</td>
+          </tr>
+          <tr>
+            <td>Sertifikat</td>
+            <td style="color: #94a3b8;">Tidak diisi</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="alert-banner">
+        Dengan mendaftar, kamu menyetujui Syarat & Ketentuan serta Kebijakan Privasi Ruangguru.
+      </div>
+
+      <div class="action-row">
+        <button class="btn btn--secondary" onclick="navigateStep(3)">Kembali</button>
+        <button class="btn btn--primary" onclick="navigateStep(5)">Kirim Pendaftaran</button>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+         TAB STEP 5: PENDAFTARAN TERKIRIM (SUCCESS SCREEN)
+         -------------------------------------------------------- -->
+    <div class="form-section" id="section-5">
+      <div class="success-window">
+        <div class="success-icon">🎉</div>
+        <h1 class="section-title" style="text-align: center;">Pendaftaran Terkirim!</h1>
+        <p class="section-subtitle" style="text-align: center;">Terimakasih sudah mendaftar jadi tutor Ruang Belajar<br>Tim kami akan menghubungi kamu via WhatsApp dalam waktu 1–3 hari kerja untuk proses verifikasi.</p>
+
+        <div class="success-card">
+          <div class="timeline-item">
+            <div class="timeline-num">1</div>
+            <div class="timeline-text">Verifikasi dokumen oleh tim Ruangguru</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">2</div>
+            <div class="timeline-text">Wawancara singkat via WhatsApp / video call</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">3</div>
+            <div class="timeline-text">Orientasi & onboarding sebagai tutor resmi</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-num">4</div>
+            <div class="timeline-text">Mulai mengajar dan terima penghasilan pertamamu!</div>
+          </div>
+        </div>
+
+        <div class="action-row" style="max-width: 650px; margin: 32px auto 0 auto;">
+          <button class="btn btn--primary btn--full" onclick="resetForm()">Kembali ke beranda</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ SCRIPTS NAVIGASI INTERAKTIF ============ -->
+  <script>
+    function navigateStep(step) {
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById('section-' + i).classList.remove('form-section--active');
+      }
+      
+      document.getElementById('section-' + step).classList.add('form-section--active');
+
+      const stepLine = document.getElementById('step-line');
+      const stepperHeader = document.getElementById('global-stepper');
+
+      if (step === 5) {
+        stepperHeader.style.display = 'none';
+      } else {
+        stepperHeader.style.display = 'block';
+        
+        let lineWidth = ((step - 1) / 3) * 100;
+        stepLine.style.width = lineWidth + '%';
+
+        for (let i = 1; i <= 4; i++) {
+          const dot = document.getElementById('step-dot-' + i);
+          dot.classList.remove('step-item--active', 'step-item--completed');
+
+          if (i < step) {
+            dot.classList.add('step-item--completed');
+          } else if (i === step) {
+            dot.classList.add('step-item--active');
+          }
+        }
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function resetForm() {
+      navigateStep(1);
+    }
+  </script>
+
+</body>
+</html>

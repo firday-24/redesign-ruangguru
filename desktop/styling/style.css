@@ -1,0 +1,1249 @@
+/* ==========================================================================
+   1. RESET & GLOBAL SPECIFICATION
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.main-wrapper {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* FITUR SINGLE PAGE APPLICATION (SPA) */
+.page-section {
+    display: none;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.page-section.active {
+    display: flex;
+}
+
+/* ==========================================================================
+   2. BRAND HEADER NAVBAR (Merged Layout Styles)
+   ========================================================================== */
+.navbar {
+    background-color: #00b49d;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Versi Flex (Modern SPA) */
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Fallback / Pendukung Versi Table (Index Lama) */
+.navbar__inner:has(.navbar__left) {
+    display: table;
+    width: 100%;
+}
+
+.navbar__left, .navbar__center, .navbar__right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navbar__left { width: 20%; }
+.navbar__center {
+    width: 60%;
+    text-align: left;
+    padding-left: 40px;
+}
+.navbar__right { width: 20%; text-align: right; }
+
+/* Elemen Komponen Navbar */
+.navbar__logo {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.1;
+}
+
+.navbar__logo .light {
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.navbar__logo .bold {
+    font-weight: 800;
+    font-size: 24px;
+    display: block;
+    margin-top: -4px;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 36px;
+}
+
+.navbar__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.navbar__link:hover {
+    opacity: 1;
+}
+
+.navbar__link--active {
+    font-weight: 700;
+    opacity: 1;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.btn-auth {
+    background-color: #ffffff;
+    color: #00b49d;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.user-avatar {
+    background-color: #ffffff;
+    color: #bcded9;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #00b49d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   3. HERO SECTION (Index & SPA Layouts)
+   ========================================================================== */
+/* Versi Flexbox (Style.css) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.hero-content { flex: 1; }
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.highlight-teal { color: #00b49d; }
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 28px;
+    max-width: 480px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Versi Display Table (Index.css) */
+.hero {
+    padding: 60px 0 30px 0;
+    background-color: #ffffff;
+}
+
+.hero__table {
+    display: table;
+    width: 100%;
+}
+
+.hero__cell-left, .hero__cell-right {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.hero__title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1.15;
+}
+
+.hero__title span { color: #00b49d; }
+
+.hero__desc {
+    font-size: 14px;
+    color: #718096;
+    margin: 20px 0 28px 0;
+    max-width: 440px;
+    line-height: 1.5;
+}
+
+.hero__actions { font-size: 0; }
+
+/* Global Buttons Style */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-primary { background-color: #00b49d; color: #ffffff; border: none; }
+.btn-primary:hover { background-color: #009c88; }
+.btn-secondary { background-color: #ffffff; color: #00b49d; border: 2px solid #00b49d; }
+.btn-secondary:hover { background-color: #e6f7f5; }
+
+.btn-action {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    margin-right: 12px;
+}
+.btn-action--primary { background-color: #00b49d; color: #ffffff; }
+.btn-action--secondary { background-color: #e6f7f5; color: #00b49d; border: 1px solid #00b49d; }
+
+
+/* ==========================================================================
+   4. METRICS & STATS SECTION
+   ========================================================================== */
+/* Grid Statistik (Modern SPA) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #e6f7f5;
+    border: 1px solid #b3e7e1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.star-icon { color: #fbbf24; }
+
+/* Metrics Row (Table-based index) */
+.metrics { padding: 20px 0 40px 0; }
+.metrics__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.metrics__cell {
+    display: table-cell;
+    width: 25%;
+    background-color: #e6f7f5;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+}
+.metrics__val {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+.metrics__lbl {
+    font-size: 12px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+
+/* ==========================================================================
+   5. FITUR UNGGULAN SECTION
+   ========================================================================== */
+.section-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 24px;
+}
+
+/* Grid System (Modern SPA) */
+.features-section { margin-top: 20px; }
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.feature-card {
+    background-color: #00b49d;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 180, 157, 0.2);
+}
+.feature-icon { font-size: 48px; margin-bottom: 16px; }
+.feature-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.feature-card p { font-size: 12px; line-height: 1.5; opacity: 0.9; }
+
+/* Table System (Index) */
+.features__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.features__cell {
+    display: table-cell;
+    width: 25%;
+    background-color: #00b49d;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 26px 16px;
+    text-align: center;
+}
+.features__icon { font-size: 36px; margin-bottom: 12px; }
+.features__name { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.features__desc { font-size: 10px; opacity: 0.9; line-height: 1.4; }
+
+
+/* ==========================================================================
+   6. KONTEN PILIHAN (INDEX COMPONENT)
+   ========================================================================== */
+.konten-header-baru {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.header-kiri {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-kiri .section-title { margin: 0 0 12px 0; }
+.tombol-jenjang-wrap { display: flex; gap: 10px; }
+
+.filter-btn {
+    border: none;
+    outline: none;
+    background-color: #ccefe9;
+    color: #00b49d;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: #00b49d;
+    color: #ffffff;
+}
+
+.header-kanan { padding-bottom: 4px; }
+.link-more {
+    color: #00b49d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* CARDS KONTEN PILIHAN */
+.cards__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.cards__cell {
+    display: table-cell;
+    width: 33.333%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    vertical-align: top;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin: 12px 0 8px 0;
+}
+
+.badge-cyan { background-color: #e6f7f5; color: #00b49d; }
+.badge-blue { background-color: #eff6ff; color: #2563eb; }
+.badge-orange { background-color: #fff7ed; color: #ea580c; }
+
+.card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a202c;
+    min-height: 40px;
+    line-height: 1.3;
+}
+
+.card-footer { text-align: right; margin-top: 10px; }
+.btn-join {
+    background-color: #00b49d;
+    color: #ffffff;
+    border: none;
+    padding: 5px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   7. TESTIMONI (INDEX COMPONENT)
+   ========================================================================== */
+.testi-section {
+    background-color: #014137;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.testi__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.testi__cell {
+    display: table-cell;
+    width: 33.333%;
+    background-color: #ffffff;
+    color: #2d3748;
+    border-radius: 8px;
+    padding: 18px;
+    vertical-align: top;
+}
+
+.testi-profile {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.testi-avatar-cell, .testi-info-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.testi-avatar-cell { width: 42px; }
+.testi-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+}
+
+.testi-name { font-size: 12px; font-weight: 700; color: #1a202c; }
+.testi-role { font-size: 10px; color: #718096; }
+.testi-text { font-size: 11px; color: #4a5568; line-height: 1.4; }
+
+
+/* ==========================================================================
+   8. BANNER DAFTAR GURU (INDEX COMPONENT)
+   ========================================================================== */
+.teacher-section {
+    background-color: #e6f7f5;
+    padding: 40px 0;
+}
+
+.teacher__table {
+    display: table;
+    width: 100%;
+}
+
+.teacher__cell-left, .teacher__cell-right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.teacher__cell-left { width: 60%; }
+.teacher__cell-right { width: 40%; }
+
+.teacher-heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: #014137;
+    line-height: 1.25;
+    max-width: 520px;
+}
+
+.btn-tutor {
+    background-color: #00b49d;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.teacher-img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ==========================================================================
+   9. TIER PAKET BELAJAR (INDEX COMPONENT)
+   ========================================================================== */
+.pricing-section { padding: 50px 0; }
+.pricing__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.pricing__cell {
+    display: table-cell;
+    width: 33.333%;
+    background-color: #e6f7f5;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 30px 24px;
+    vertical-align: top;
+    position: relative;
+}
+
+.pricing__cell--featured {
+    background-color: #fdf6ec;
+    border-color: #f59e0b;
+}
+
+.floating-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f59e0b;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.tier-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tier-list { list-style: none; margin-bottom: 30px; }
+.tier-list li { font-size: 12px; color: #4a5568; margin-bottom: 10px; }
+.tier-list li i { color: #00b49d; margin-right: 8px; }
+
+.btn-tier {
+    width: 100%;
+    background-color: #00b49d;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pricing__cell--featured .btn-tier {
+    background-color: transparent;
+    color: #f59e0b;
+    border: 1px solid #f59e0b;
+}
+
+
+/* ==========================================================================
+   10. PROMO SLIDER (INDEX COMPONENT)
+   ========================================================================== */
+.promo-section {
+    background-color: #fdf6ec;
+    padding: 40px 0;
+}
+
+.promo__table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.promo__cell {
+    display: table-cell;
+    width: 50%;
+}
+
+.promo-banner-img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.controls-row {
+    text-align: right;
+    margin-top: 16px;
+}
+
+.circle-arrow {
+    width: 34px;
+    height: 34px;
+    background-color: #f59e0b;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+
+/* ==========================================================================
+   11. HALAMAN PILIHAN PRODUK SPECIFICS (SPA component)
+   ========================================================================== */
+.product-header {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.product-main-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.product-subtitle {
+    font-size: 16px;
+    color: #64748b;
+}
+
+/* Navigasi Tab Filter */
+.product-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 32px auto 12px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #64748b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.tab-btn--active {
+    background-color: #00b49d;
+    color: #ffffff !important;
+}
+
+/* Grid Kartu Paket */
+.product-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 20px;
+}
+
+/* Elemen Kartu Produk */
+.prod-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prod-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+}
+
+.prod-card__badge-container { margin-bottom: 16px; }
+
+.prod-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: #ffffff;
+    display: inline-block;
+}
+
+/* Modifikasi Warna Badge Atas */
+.bg-orange  { background-color: #ea580c; }
+.bg-blue    { background-color: #2563eb; }
+.bg-teal    { background-color: #00b49d; }
+.bg-purple  { background-color: #7c3aed; }
+.bg-red     { background-color: #dc2626; }
+
+.prod-card__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.prod-card__icon { font-size: 28px; }
+
+/* Modifikasi Warna Icon Judul */
+.text-orange  { color: #ea580c; }
+.text-blue    { color: #2563eb; }
+.text-teal    { color: #00b49d; }
+.text-purple  { color: #7c3aed; }
+.text-red     { color: #dc2626; }
+
+.prod-card__title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.prod-card__desc {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* Area Sektor Komponen Harga */
+.prod-card__price-section {
+    margin-bottom: 24px;
+    background-color: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.price-old {
+    font-size: 13px;
+    color: #94a3b8;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.price-current-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.price-now {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.price-period {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* List Item Keunggulan Paket */
+.prod-card__features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-grow: 1;
+}
+
+.prod-card__features li {
+    font-size: 13px;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+/* Modifikasi Elemen Tombol Kartu */
+.prod-card__btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.prod-card__btn:hover { opacity: 0.9; }
+
+.btn-orange { background-color: #ea580c; }
+.btn-blue   { background-color: #2563eb; }
+.btn-teal   { background-color: #00b49d; }
+.btn-purple { background-color: #7c3aed; }
+.btn-red    { background-color: #dc2626; }
+
+
+/* ==========================================================================
+   12. HALAMAN SUB-FITUR (Video, Latihan, Live, Rangkuman - SPA Components)
+   ========================================================================== */
+.back-bar {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-back {
+    font-size: 18px;
+    color: #334155;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.back-title {
+    font-size: 16px;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+.back-actions { display: flex; gap: 20px; color: #334155; }
+.clickable-icon { cursor: pointer; }
+
+.video-player-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.main-video-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.video-player-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-big-btn {
+    width: 76px;
+    height: 76px;
+    background-color: #ffffff;
+    color: #ea580c;
+    border: none;
+    border-radius: 50%;
+    font-size: 26px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+.video-controls-mock {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 16px;
+}
+
+.progress-bar-total {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.progress-bar-current {
+    width: 40%;
+    height: 100%;
+    background-color: #00b49d;
+}
+
+.controls-row:has(.left-controls) {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.left-controls, .right-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.content-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.description-card h3 { font-size: 18px; margin-bottom: 12px; }
+
+/* Quiz Specific */
+.quiz-header-banner {
+    background-color: #00b49d;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.quiz-icon-wrapper { font-size: 36px; }
+
+.quiz-progress-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quiz-progress-bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #ccf0eb;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.quiz-progress-bar-fill {
+    height: 100%;
+    background-color: #00b49d;
+    border-radius: 4px;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.option-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.option-item.selected {
+    background-color: #ccf0eb;
+    border-color: #00b49d;
+    color: #00b49d;
+    font-weight: 600;
+}
+
+.quiz-navigation-bar {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-quiz-btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Rangkuman Specific */
+.sum-tag-blue {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+}
+
+.summary-main-title { margin-top: 12px; font-size: 24px; }
+.summary-divider { border: none; border-top: 1px solid #e2e8f0; margin: 16px 0; }
+
+
+/* ==========================================================================
+   13. FOOTER LAYER & BOTTOM STRIP (Merged Layer)
+   ========================================================================== */
+.download-strip {
+    background-color: #273142;
+    color: #ffffff;
+    padding: 24px 0;
+    margin-top: 60px;
+}
+
+/* Flex Version (Modern style) */
+.download-strip__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Table Version Fallback (Index layout) */
+.download-strip__table { display: table; width: 100%; }
+.download-strip__left, .download-strip__right { display: table-cell; vertical-align: middle; }
+.download-strip__left { font-size: 15px; font-weight: 600; }
+.download-strip__right { text-align: right; }
+
+.badge-store { height: 32px; margin-left: 10px; vertical-align: middle; }
+.store-badges { display: flex; gap: 12px; }
+.clickable-badge, .hg-badge { height: 38px; cursor: pointer; }
+
+/* FOOTER CONTAINER AREA */
+.site-footer {
+    background-color: #1a222f;
+    color: #94a3b8;
+    padding: 50px 0 0 0;
+}
+
+/* Modern Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Table Layout (Index fallback) */
+.footer-main__table {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 40px;
+}
+.footer-col { display: table-cell; vertical-align: top; }
+.footer-col--brand { width: 36%; }
+.footer-col--nav { width: 16%; }
+
+.footer-logo {
+    color: #00b49d;
+    margin-bottom: 12px;
+}
+.footer-logo .light { font-weight: 300; font-size: 14px; }
+.footer-logo .bold { font-weight: 800; font-size: 24px; }
+.footer-tagline { font-size: 11px; }
+
+.footer-head {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-links-col { display: flex; flex-direction: column; gap: 10px; }
+.footer-links-col h4 { color: #ffffff; font-size: 15px; margin-bottom: 4px; }
+.footer-links-col a, .footer-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+}
+.footer-links-col a:hover { color: #ffffff; }
+
+/* Sub-Bottom Footer Bar */
+.footer-bottom {
+    background-color: #111722;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Modern Layout */
+.footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Table Layout Fallback */
+.footer-bottom__left, .footer-bottom__right { display: table-cell; vertical-align: middle; }
+.footer-bottom__right { align-self: right; }
+
+.social-icons a {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.footer-icon {
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 16px;
+}

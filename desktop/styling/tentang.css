@@ -1,0 +1,471 @@
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f1f2f4;
+}
+
+.container{
+    width:90%;
+    max-width:1280px;
+    margin:auto;
+}
+.navbar {
+    background-color: #00b49d;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Versi Flex (Modern SPA) */
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Fallback / Pendukung Versi Table (Index Lama) */
+.navbar__inner:has(.navbar__left) {
+    display: table;
+    width: 100%;
+}
+
+.navbar__left, .navbar__center, .navbar__right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navbar__left { width: 20%; }
+.navbar__center {
+    width: 60%;
+    text-align: left;
+    padding-left: 40px;
+}
+.navbar__right { width: 20%; text-align: right; }
+
+/* Elemen Komponen Navbar */
+.navbar__logo {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.1;
+}
+
+.navbar__logo .light {
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.navbar__logo .bold {
+    font-weight: 800;
+    font-size: 24px;
+    display: block;
+    margin-top: -4px;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 36px;
+}
+
+.navbar__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.navbar__link:hover {
+    opacity: 1;
+}
+
+.navbar__link--active {
+    font-weight: 700;
+    opacity: 1;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.btn-auth {
+    background-color: #ffffff;
+    color: #00b49d;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.user-avatar {
+    background-color: #ffffff;
+    color: #bcded9;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #00b49d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+/* ===== TESTIMONI ===== */
+
+.tentang-testimoni{
+    background:#005f55;
+    padding:60px 0;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    color:#fff;
+    font-size:48px;
+    font-weight:700;
+}
+
+.lihat-semua{
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+}
+
+.testimoni-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.testimoni-card{
+    background:#f3f3f3;
+    border-radius:20px;
+    padding:28px;
+    min-height:220px;
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.user-info img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+}
+
+.user-info h4{
+    font-size:18px;
+}
+
+.user-info span{
+    color:#888;
+    font-size:13px;
+}
+
+.testimoni-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ===== PAKET ===== */
+
+.paket-section{
+    padding:80px 0;
+}
+
+.paket-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.paket-card{
+    min-height:360px;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+}
+
+.basic{
+    background:#dff1ef;
+    border:1px solid #b7e0da;
+}
+
+.premium{
+    background:#f8f3ea;
+    border:3px solid #f4a000;
+}
+
+.super{
+    background:#dff1ef;
+    border:1px solid #b7e0da;
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#f4a000;
+    color:white;
+    padding:8px 20px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.paket-card h3{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.paket-card ul{
+    list-style:none;
+}
+
+.paket-card li{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.paket-card button{
+    position:absolute;
+    bottom:25px;
+    left:35px;
+    right:35px;
+    height:55px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.basic button,
+.super button{
+    background:#12c6b5;
+    color:white;
+}
+
+.premium button{
+    background:#fff5e5;
+    color:#f4a000;
+    border:2px solid #f4a000;
+}
+
+/* ===== PROMO ===== */
+
+.promo-section{
+    background:#f4efe6;
+    padding:40px 0;
+    border-top:1px solid #e7d8be;
+    border-bottom:1px solid #e7d8be;
+}
+
+.promo-wrapper{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.promo-wrapper img{
+    width:100%;
+    border-radius:6px;
+}
+
+.promo-navigation{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:25px;
+}
+
+.promo-navigation button{
+    width:56px;
+    height:56px;
+    border:none;
+    border-radius:50%;
+    background:#f4a000;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* ===== HUBUNGI ===== */
+
+.hubungi-section{
+    padding:100px 0 50px;
+    text-align:center;
+}
+
+.hubungi-header i{
+    font-size:70px;
+    color:#008f80;
+    margin-bottom:15px;
+}
+
+.hubungi-header h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hubungi-header p{
+    color:#777;
+    font-size:20px;
+}
+
+/* ===== KONTAK ===== */
+
+.info-kontak{
+    background:#dff5f3;
+    padding:40px 0 60px;
+}
+
+.info-kontak h3{
+    margin-bottom:25px;
+    font-size:24px;
+}
+
+.kontak-box{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+}
+
+.kontak-item{
+    padding:25px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+.kontak-item:last-child{
+    border-bottom:none;
+}
+
+.kontak-item span{
+    color:#777;
+    display:block;
+    margin-bottom:6px;
+}
+
+.kontak-item h4{
+    font-size:24px;
+}
+
+/* ===== DOWNLOAD APP ===== */
+
+.download-app{
+    background:#2f3c4f;
+    padding:45px 0;
+}
+
+.download-app .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.download-app h2{
+    color:white;
+    font-size:42px;
+}
+
+.store-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.store-buttons img{
+    height:55px;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer{
+    background:#1e2838;
+    color:white;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    gap:40px;
+    padding:60px 0;
+}
+
+.footer-links-col{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links-col h4{
+    margin-bottom:15px;
+}
+
+.footer-links-col a{
+    color:#d8d8d8;
+    text-decoration:none;
+    margin-bottom:10px;
+}
+
+.footer-tagline{
+    color:#d8d8d8;
+    margin-top:15px;
+}
+
+.footer-bottom{
+    background:#000;
+}
+
+.footer-bottom__inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+
+.social-icons i{
+    font-size:22px;
+}

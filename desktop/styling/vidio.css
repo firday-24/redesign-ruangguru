@@ -1,0 +1,409 @@
+/* ==========================================================================
+   RESET & SETUP DASAR
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+.container {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   NAVBAR GREEN MOCKUP
+   ========================================================================== */
+.navbar {
+    background-color: #00b49d;
+    padding: 14px 0;
+}
+
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    color: #ffffff;
+    line-height: 1;
+}
+
+.navbar__logo .light {
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.navbar__logo .bold {
+    font-weight: 800;
+    font-size: 22px;
+    display: block;
+    margin-top: -2px;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.navbar__link--active {
+    font-weight: 700;
+    opacity: 1;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+}
+
+.avatar-circle {
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    color: #00b49d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   MAIN LAYOUT & HEADER VIDEO
+   ========================================================================== */
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.video-header {
+    margin-bottom: 24px;
+}
+
+.video-header__title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.video-icon-box {
+    color: #00b49d;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.video-header__title-row h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.video-header__sub {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   PIL TABS JENJANG ROW
+   ========================================================================== */
+.tabs-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.tabs-group {
+    display: flex;
+    gap: 12px;
+}
+
+.tab-btn {
+    border: none;
+    outline: none;
+    background-color: #ccf0eb;
+    color: #00b49d;
+    padding: 8px 32px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background-color: #00b49d;
+    color: #ffffff;
+}
+
+.lihat-semua-btn {
+    color: #00b49d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==========================================================================
+   BOX METRICS GRID
+   ========================================================================== */
+.metrics-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.metric-card {
+    flex: 1;
+    background-color: #edf7f6;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.metric-num {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.metric-label {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   LIST ROW VIDEO ITEM
+   ========================================================================== */
+.video-section .section-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.video-row-item {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7f4; /* Warna mint pastel halus */
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.video-thumbnail-wrapper {
+    position: relative;
+    width: 130px;
+    height: 76px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #000;
+}
+
+.video-thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.video-info-wrapper {
+    flex-grow: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge-video {
+    align-self: flex-start;
+    background-color: #fef08a;
+    color: #a16207;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 12px;
+    border-radius: 12px;
+    border: 1px solid #fef08a;
+    margin-bottom: 6px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.video-title.no-badge {
+    margin-top: 4px;
+}
+
+.video-action-wrapper {
+    flex-shrink: 0;
+}
+
+.btn-tonton {
+    background-color: #00b49d;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   DOWNLOAD CTAS STRIP
+   ========================================================================== */
+.download-strip {
+    background-color: #334155;
+    color: #ffffff;
+    padding: 24px 0;
+}
+
+.download-strip__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-strip__inner h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.store-badges {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.store-badges img {
+    height: 38px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SITE FOOTER DARK
+   ========================================================================== */
+.site-footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    padding: 48px 0 0 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.footer-brand-col {
+    width: 30%;
+}
+
+.footer-logo {
+    color: #00b49d;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.footer-logo .light {
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.footer-logo .bold {
+    font-weight: 800;
+    font-size: 22px;
+    display: block;
+    margin-top: -2px;
+}
+
+.footer-tagline {
+    font-size: 13px;
+}
+
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links-col h4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.footer-links-col a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links-col a:hover {
+    color: #ffffff;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    background-color: #0f172a;
+    padding: 16px 0;
+    font-size: 13px;
+}
+
+.footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 16px;
+}

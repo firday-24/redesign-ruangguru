@@ -1,0 +1,439 @@
+/* ==========================================================================
+   1. NAVBAR STYLES 
+   ========================================================================== */
+.navbar {
+    background-color: #00b49d;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Versi Flex (Modern SPA) */
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Ditambahkan agar sejajar rapi di tengah */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Fallback */
+.navbar__inner:has(.navbar__left) {
+    display: table;
+    width: 100%;
+}
+
+.navbar__left, .navbar__center, .navbar__right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navbar__left { width: 20%; }
+.navbar__center {
+    width: 60%;
+    text-align: left;
+    padding-left: 40px;
+}
+.navbar__right { width: 20%; text-align: right; }
+
+/* Elemen Komponen Navbar */
+.navbar__logo {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.1;
+}
+
+.navbar__logo .light {
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+.navbar__logo .bold {
+    font-weight: 800;
+    font-size: 24px;
+    display: block;
+    margin-top: -4px;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 36px;
+}
+
+.navbar__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.navbar__link:hover {
+    opacity: 1;
+}
+
+.navbar__link--active {
+    font-weight: 700;
+    opacity: 1;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.btn-auth {
+    background-color: #ffffff;
+    color: #00b49d;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.user-avatar {
+    background-color: #ffffff;
+    color: #bcded9;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #00b49d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+/* ==========================================================================
+   2. MAIN CONTENT STYLES (Untuk Halaman Detail Live Class)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding-bottom: 50px;
+}
+
+/* CONTAINER UTAMA */
+.main-container {
+    max-width: 820px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+/* HEADER BAR (Judul & Tombol Back) */
+.header-bar {
+    background-color: white;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-left h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #0f172a;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+/* VIDEO LAYER AREA */
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(30, 41, 59, 0.75);
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.play-btn:hover {
+    background: #00b49d;
+    transform: scale(1.05);
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: white;
+}
+
+.time-slider {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.slider-progress {
+    width: 35%;
+    height: 100%;
+    background: #00b49d;
+    border-radius: 2px;
+    position: relative;
+}
+
+.slider-progress::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+}
+
+.controls-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    align-items: center;
+}
+
+.controls-left, .controls-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* STATS CARD GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon-stat {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #00b49d;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* PREPARATION CHECKLIST STYLES */
+.checklist-section {
+    margin-bottom: 30px;
+}
+
+.checklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.checklist-header h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #00b49d;
+}
+
+.checklist-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checklist-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.check-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    color: white;
+}
+
+.checklist-item.checked .check-circle {
+    background-color: #00b49d;
+    border-color: #00b49d;
+}
+
+.item-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+.item-icon {
+    font-size: 1rem;
+    color: #334155;
+}
+
+/* ACTION BUTTON (Mulai Kelas) */
+.btn-start {
+    width: 100%;
+    background-color: #00b49d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 180, 157, 0.2);
+    transition: background 0.2s;
+}
+
+.btn-start:hover {
+    background-color: #009380;
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}

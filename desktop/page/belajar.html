@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Belajar - Ruangguru</title>
+    <!-- Google Font Inter & Icon FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS Terpisah -->
+    <link rel="stylesheet" href="/styling/Style.css">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar__inner">
+                <div class="navbar__left">
+                  <a href="../index.html" class="logo">
+                  <img src="../assets/logo-white.svg" alt="Ruang Belajar" style="width: 100px;"></a>
+                </div>
+                <div class="navbar__center">
+                    <div class="navbar__menu">
+                        <a href="../page/belajar.html" class="navbar__link navbar__link--active">Belajar</a>
+                        <a href="../page/produk.html" class="navbar__link">Produk</a>
+                        <a href="../page/guru.html" class="navbar__link">Guru</a>
+                        <a href="../page/tentang.html" class="navbar__link">Tentang</a>
+                    </div>
+                </div>
+                <div class="navbar__right">
+                    <button class="btn-auth">Daftar/Masuk</button>
+                    <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="container main-wrapper">
+
+        <!-- ==========================================
+             HALAMAN 0: HOME / DASHBOARD (Sesuai image_dda6ea.jpg)
+             ========================================== -->
+        <section id="page-home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Belajar Lebih <span class="highlight-teal">Seru</span> di Ruangguru</h1>
+                    <p class="hero-subtitle">Jelajahi ribuan materi belajar interaktif dan wujudkan mimpimu bersama Ruangguru</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">🚀 Mulai Belajar Gratis</button>
+                        <button class="btn btn-secondary"><i class="fa-solid fa-play"></i> Lihat Produk</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- Ilustrasi Karakter Siswa -->
+                    <img src="https://img.freepik.com/free-vector/happy-students-with-books-background_23-2148119339.jpg" alt="Siswa Ruangguru" class="hero-img">
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>30 Jt+</h3>
+                    <p>Siswa Aktif</p>
+                </div>
+                <div class="stat-card">
+                    <h3>200 K+</h3>
+                    <p>Materi Pembelajaran</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5 K+</h3>
+                    <p>Guru Aktif</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.9 ⭐</h3>
+                    <p>Rating Pengguna</p>
+                </div>
+            </div>
+
+            <!-- Fitur Unggulan Section -->
+            <div class="features-section">
+                <h2 class="section-title">Fitur Unggulan</h2>
+                <div class="features-grid">
+                    <!-- Card Video -->
+                    <div class="feature-card" onclick="navigateTo('page-video')">
+                        <div class="feature-icon"><i class="fa-solid fa-square-play"></i></div>
+                        <h3>Video Pembelajaran</h3>
+                        <p>Ribuan video interaktif yang menjelaskan konsep sulit dengan cara yang mudah dipahami</p>
+                    </div>
+                    <!-- Card Latihan -->
+                    <div class="feature-card" onclick="navigateTo('page-latihan')">
+                        <div class="feature-icon"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                        <h3>Latihan Soal</h3>
+                        <p>Latihan soal dengan beragam level kesulitan beserta kunci jawaban yang menjelaskan dengan tips and trick</p>
+                    </div>
+                    <!-- Card Live Class -->
+                    <div class="feature-card" onclick="navigateTo('page-live')">
+                        <div class="feature-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+                        <h3>Live Class</h3>
+                        <p>Belajar langsung bersama pengajar berpengalaman dan terverifikasi yang siap membantu kapan saja</p>
+                    </div>
+                    <!-- Card Rangkuman -->
+                    <div class="feature-card" onclick="navigateTo('page-rangkuman')">
+                        <div class="feature-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <h3>Rangkuman</h3>
+                        <p>Ratusan materi yang sudah dirangkum dengan bahasa dan ilustrasi menarik untuk memahami banyak konsep</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             HALAMAN 1: VIDEO PEMBELAJARAN
+             ========================================== -->
+        <section id="page-video" class="page-section">
+            <div class="back-bar">
+                <i class="fa-solid fa-arrow-left icon-back" onclick="navigateTo('page-home')"></i>
+                <span class="back-title">Kimia Dasar: Ikatan & Reaksi Kimia</span>
+                <div class="back-actions">
+                    <i class="fa-solid fa-bookmark clickable-icon"></i>
+                    <i class="fa-solid fa-share-nodes clickable-icon"></i>
+                </div>
+            </div>
+
+            <div class="video-player-container">
+                <img src="https://img.freepik.com/free-vector/maths-formulas-chalkboard_23-2148178125.jpg" alt="Video Player" class="main-video-img">
+                <div class="video-player-overlay">
+                    <button class="play-big-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="video-controls-mock">
+                    <div class="progress-bar-total"><div class="progress-bar-current"></div></div>
+                    <div class="controls-row">
+                        <div class="left-controls">
+                            <i class="fa-solid fa-play control-btn"></i>
+                            <i class="fa-solid fa-volume-high control-btn"></i>
+                            <span class="video-time">12:43 / 34:20</span>
+                        </div>
+                        <div class="right-controls">
+                            <i class="fa-solid fa-gear control-btn"></i>
+                            <i class="fa-solid fa-expand control-btn"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card description-card">
+                <h3>Deskripsi</h3>
+                <p>Mata pelajaran Ikatan dan Reaksi Kimia adalah pintu gerbang untuk memahami bagaimana alam semesta ini dibangun pada tingkat molekuler. Di alam, jarang sekali kita menemukan atom yang sendirian; mereka cenderung berpasangan, bergabung, dan bertukar pasangan untuk mencapai kestabilan.</p>
+            </div>
+
+            <div class="quiz-navigation-bar">
+                <button class="nav-quiz-btn" onclick="navigateTo('page-home')"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="nav-quiz-btn" onclick="navigateTo('page-latihan')">Lanjut ke Latihan Soal <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             HALAMAN 2: LATIHAN SOAL
+             ========================================== -->
+        <section id="page-latihan" class="page-section">
+            <div class="back-bar">
+                <i class="fa-solid fa-arrow-left icon-back" onclick="navigateTo('page-home')"></i>
+                <span class="back-title">Latihan Soal</span>
+            </div>
+
+            <div class="quiz-header-banner">
+                <div class="quiz-icon-wrapper"><i class="fa-solid fa-calculator"></i></div>
+                <div class="quiz-title-meta">
+                    <h2>MATEMATIKA</h2>
+                    <p>Sekolah Dasar · Kelas 1–6</p>
+                </div>
+            </div>
+
+            <div class="content-card quiz-body-card">
+                <div class="quiz-progress-row">
+                    <div class="quiz-progress-bar-container">
+                        <div class="quiz-progress-bar-fill" style="width: 20%;"></div>
+                    </div>
+                    <span class="quiz-progress-text">1/5</span>
+                </div>
+
+                <div class="question-text">
+                    <p>1. Pak Budi mempunyai 4 kandang ayam. Setiap kandang berisi 25 ekor ayam. Berapa jumlah ayam Pak Budi seluruhnya?</p>
+                </div>
+
+                <div class="options-list">
+                    <button class="option-item">A. 75 ekor</button>
+                    <button class="option-item">B. 90 ekor</button>
+                    <button class="option-item">C. 100 ekor</button>
+                    <button class="option-item">D. 105 ekor</button>
+                </div>
+            </div>
+
+            <div class="quiz-navigation-bar">
+                <button class="nav-quiz-btn" onclick="navigateTo('page-video')"><i class="fa-solid fa-arrow-left"></i> Ke Video</button>
+                <button class="nav-quiz-btn" onclick="navigateTo('page-live')">Ke Live Class <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             HALAMAN 3: LIVE CLASS
+             ========================================== -->
+        <section id="page-live" class="page-section">
+            <div class="back-bar">
+                <i class="fa-solid fa-arrow-left icon-back" onclick="navigateTo('page-home')"></i>
+                <span class="back-title">UTBK: Penalaran Matematika</span>
+            </div>
+
+            <div class="video-player-container">
+                <img src="https://img.freepik.com/free-photo/blackboard-with-math-formulas_23-2148234320.jpg" alt="Live Class" class="main-video-img">
+                <div class="video-player-overlay">
+                    <button class="play-big-btn"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="video-controls-mock">
+                    <div class="progress-bar-total"><div class="progress-bar-current"></div></div>
+                    <div class="controls-row">
+                        <div class="left-controls">
+                            <i class="fa-solid fa-play control-btn"></i>
+                            <i class="fa-solid fa-volume-high control-btn"></i>
+                            <span class="video-time">12:43 / 34:20</span>
+                        </div>
+                        <div class="right-controls">
+                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card description-card">
+                <h3>Deskripsi Live Class</h3>
+                <p>Pernahkah Anda bertanya-tanya, "Kapan materi matematika ini akan saya gunakan?" Di sini kita akan membedah empat pilar materi utama yang menjadi menu wajib di UTBK.</p>
+            </div>
+
+            <div class="quiz-navigation-bar">
+                <button class="nav-quiz-btn" onclick="navigateTo('page-latihan')"><i class="fa-solid fa-arrow-left"></i> Ke Latihan</button>
+                <button class="nav-quiz-btn" onclick="navigateTo('page-rangkuman')">Ke Rangkuman <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             HALAMAN 4: RANGKUMAN
+             ========================================== -->
+        <section id="page-rangkuman" class="page-section">
+            <div class="back-bar">
+                <i class="fa-solid fa-arrow-left icon-back" onclick="navigateTo('page-home')"></i>
+                <span class="back-title">Rangkuman Materi</span>
+            </div>
+
+            <div class="content-card summary-main-card">
+                <div class="summary-meta-tags">
+                    <span class="sum-tag-blue">Matematika</span>
+                    <span class="sum-tag-blue">SD</span>
+                </div>
+                <h1 class="summary-main-title">Matematika Wajib: Persamaan Aljabar</h1>
+                <hr class="summary-divider">
+                <div class="summary-document-body">
+                    <div class="doc-section">
+                        <h4>1. Pengertian Aljabar</h4>
+                        <p>Aljabar adalah cabang matematika yang mempelajari penggunaan huruf, simbol, dan angka untuk menyatakan suatu nilai yang belum diketahui.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-navigation-bar">
+                <button class="nav-quiz-btn" onclick="navigateTo('page-live')"><i class="fa-solid fa-arrow-left"></i> Ke Live Class</button>
+                <button class="nav-quiz-btn" onclick="navigateTo('page-home')"><i class="fa-solid fa-house"></i> Kembali ke Home</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- COBA GRATIS STRIP (Sesuai image_dda6ea.jpg) -->
+    <section class="download-strip">
+        <div class="container download-strip__inner">
+            <h3>Coba Gratis Aplikasi Ruangguru</h3>
+            <div class="store-badges">
+                <img src="/assets/images/google play.png" alt="Google Play" class="clickable-badge">
+                <img src="/assets/images/app store.png" alt="App Store" class="clickable-badge">
+                <img src="/assets/images/huawei store.png" alt="AppGallery" class="clickable-badge hg-badge">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LINK AKTIF -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-col">
+                <div class="footer-logo">
+                  <a href="../index.html" class="logo">
+                  <img src="assets/logo-white.svg" alt="Ruang Belajar" style="width: 100px;"></a>
+                </div>
+                <p class="footer-tagline">Belajar lebih seru di Ruangguru</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Belajar</h4>
+                <a onclick="navigateTo('page-video')">Video</a>
+                <a onclick="navigateTo('page-latihan')">Latihan Soal</a>
+                <a onclick="navigateTo('page-live')">Live class</a>
+                <a onclick="navigateTo('page-rangkuman')">Rangkuman</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Produk</h4><a href="#">Paket Langganan</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Guru</h4><a href="#">Daftar tutor</a><a onclick="navigateTo('page-live')">Live class</a>
+            </div>
+            <div class="footer-links-col">
+                <h4>Tentang</h4><a href="#">Testimoni</a><a href="#">Promo</a><a href="#">Kontak</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom__inner">
+                <p>&copy; Copyright 2026 Ruangguru</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT SYSTEM -->
+    <script>
+        function navigateTo(pageId) {
+            const allPages = document.querySelectorAll('.page-section');
+            allPages.forEach(page => page.classList.remove('active'));
+
+            const targetPage = document.getElementById(pageId);
+            if(targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Atur menu aktif di navbar
+            const allLinks = document.querySelectorAll('.navbar__menu .navbar__link');
+            allLinks.forEach(link => link.classList.remove('navbar__link--active'));
+            
+            if (pageId === 'page-home') {
+                document.getElementById('nav-link-home').classList.add('navbar__link--active');
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        const options = document.querySelectorAll('.option-item');
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                options.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+    </script>
+
+</body>
+</html>
