@@ -10,3 +10,8 @@
 - `dekstop`: berisi source code webpage "ruang belajar" yang kompatibel untuk device desktop
 - `mobile`: berisi source code homepage untuk device mobile/handphone
 - `tablet`: berisi source code homepage untuk device tablet
+
+## Link preview github page
+- `dekstop`: https://firday-24.github.io/redesign-ruangguru/desktop
+- `mobile`: https://firday-24.github.io/redesign-ruangguru/mobile
+- `tablet`: https://firday-24.github.io/redesign-ruangguru/tablet
