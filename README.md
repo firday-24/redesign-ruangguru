@@ -12,6 +12,6 @@
 - `tablet`: berisi source code homepage untuk device tablet
 
 ## Link preview github page
-- `dekstop`: https://firday-24.github.io/redesign-ruangguru/desktop
+- `dekstop`: https://firday-24.github.io/redesign-ruangguru/desktop/index.html
 - `mobile`: https://firday-24.github.io/redesign-ruangguru/mobile
 - `tablet`: https://firday-24.github.io/redesign-ruangguru/tablet
